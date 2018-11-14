@@ -1,10 +1,7 @@
-from flask import Flask
-app=Flask(__name__)
-@app.route('/')
-def hello_world():
-    return ('hello!')
-@app.route('/hello')
-def hello():
-    return ("hhh")
-if __name__=='__main__':
-    app.run()
+from urllib import request
+import json
+url='http://pvp.qq.com/web201605/js/item.json'
+response=request.urlopen(url)
+content=response.read()
+content=json.loads(content)
+print(content)
