@@ -13,3 +13,4 @@ sudo pacman -Syy
 接着初始化时又出现了usr/local/mysql/bin/mysqld: error while loading shared libraries: libnuma.so.1: cannot open shared object file: No such file or directory
 解决：sudo pacman -S numctal
 2.mysql安装教材：https://blog.csdn.net/sweetgirl520/article/details/78131327
+
