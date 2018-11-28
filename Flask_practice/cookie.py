@@ -3,7 +3,9 @@ from flask import render_template, redirect, url_for, request, session, make_res
 import time
 
 app = Flask(__name__)
-
+@app.route('/')
+def index():
+    return redirect(url_for('login'))
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     response = None
