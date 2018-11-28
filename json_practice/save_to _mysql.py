@@ -15,7 +15,7 @@ cursor = connection.cursor()
 
 # 执行数据写入
 for i in range(length):
-    sql="insert into json values('%d','%s','%s','%d','%d','%s')" %(data[i]['ename'],data[i]['cname'],data[i]['title'],data[i]['new_type'],data[i]['hero_type'],data[i]['skin_name'])
+    sql="insert into json values('%d','%s','%s','%d','%d','%s');" %(data[i]['ename'],data[i]['cname'],data[i]['title'],data[i]['new_type'],data[i]['hero_type'],data[i]['skin_name'])
     try:
         cursor.execute(sql)
         connection.commit() #提交到数据库执行，一定要记提交哦
